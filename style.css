@@ -220,6 +220,265 @@ section{
     padding: 0;
 }
 
+.loginformcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, .9);
+    position: fixed;
+    top: 0;
+    right: -105%;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+}
+
+.loginformcontainer .act{
+    right: 50%;
+}
+
+.loginformcontainer form{
+    background-color: #fff;
+    border:var(--border);
+    width: 40rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    margin: 2rem;
+}
+
+.loginformcontainer form h3{
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+    text-align: center;
+
+}
+
+.loginformcontainer form span{
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.loginformcontainer form .box{
+    margin: .7rem 0;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: .5rem;
+    padding: 1rem 1.2rem;
+    color: var(--black);
+    text-transform: none;
+    width: 100%;
+
+}
+
+.loginformcontainer form .checkbox{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 0;
+    
+}
+.loginformcontainer form .checkbox label{
+    font-size: 1.5rem;
+    color: var(--light-color);
+    cursor: pointer;
+}
+
+.loginformcontainer form .btn{
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.loginformcontainer form p{
+    padding-top:.8rem;
+    color: var(--light-color);
+    font-size: 1.5rem;
+}
+
+.loginformcontainer form p a{
+    color: var(--green);
+    text-decoration: underline;
+}
+
+.loginformcontainer #closeloginbutton{
+    position:absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.iconcontainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(25rem , 1fr));
+    gap: 1.5rem;
+}
+
+.iconcontainer .icons{
+    display: flex;
+    align-items: center;
+
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.iconcontainer .icon i{
+    font-size: 3.5rem;
+    color:var(--green);
+}
+
+.iconcontainer .icon h3{
+    font-size: 2.2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+
+.iconcontainer .icon p{
+    font-size: 1.4rem;
+    color: var(--light-color);
+
+}
+
+.heading{
+    text-align: center;
+    margin-bottom:2rem ;
+    position: relative;
+}
+
+.heading::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: .01rem;
+    background: rgba(0,0,0,.1);
+    z-index:-1;
+
+}
+
+.heading span{
+    font-size: 3rem;
+    padding: .5rem 2rem ;
+    color: var(--black);
+    background: #fff;
+    border: var(--border);
+}
+
+.featured .featuredslider .box{
+    width: 25rem;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    border: var(--border);
+    text-align: center;
+
+}
+
+.featured .featuredslider .box:hover{
+    border: var(--border-hover);
+
+}
+
+.featured .featuredslider .box .images{
+    padding: 1rem;
+    background: linear-gradient(15deg, #eee 30%, #fff 30.1%);
+}
+
+.featured .featuredslider .box:hover .images{
+    transform: translateY(6rem);
+}
+
+.featured .featuredslider .box .images img{
+    height: 25rem;
+}
+
+
+.featured .featuredslider .box .icon{
+    border-bottom: var(--border-hover);
+    position: absolute;
+    top: 0; left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 1;
+    transform: translateY(-105%);
+}
+
+.featured .featuredslider .box:hover .icon{
+    transform: translateY(0%); 
+}
+
+.featured .featuredslider .box .icon a{
+    color: var(--black);
+    font-size: 2.2rem;
+    padding:1.3rem 1.5rem;
+}
+
+
+.featured .featuredslider .box .icon a:hover{
+    background: var(--green);
+    color: #fff;
+
+}
+
+.featured .featuredslider .box .content{
+    background: #eee;
+    padding: 1.5rem;
+
+}
+
+.featured .featuredslider .box .content h3{
+   font-size: 2rem;
+color: var(--black);
+
+}
+
+.featured .featuredslider .box .content .price{
+    font-size: 2.2rem;
+    padding-top: 1rem;
+    color: var(--black);
+
+}
+   
+.featured .featuredslider .box .content span{
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    color: var(--light-color);
+    text-decoration: line-through;
+    
+}
+
+.swiper-button-next, .swiper-button-prev{
+    border: var(--border);
+    height: 4rem;
+    width: 4rem;
+    color: var(--black);
+    background: #fff;
+
+}
+
+.swiper-button-next:after, .swiper-button-prev:after{
+    font-size: 2rem;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover{
+    background: var(--black);
+    color: #fff;
+
+}
+
+
+
+
+
+
+
 
 
 
