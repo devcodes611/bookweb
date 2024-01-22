@@ -1,3 +1,11 @@
+function loader(){
+  document.querySelector('.loader').classList.add('active');
+}
+
+function fadeOut(){
+  setTimeout(loader, 4000);
+}
+
 searchform = document.querySelector('.searchform');
 document.querySelector('#searchbtn').onclick = () =>{
     searchform.classList.toggle('active');
@@ -5,18 +13,19 @@ document.querySelector('#searchbtn').onclick = () =>{
 
 let loginform = document.querySelector('.loginformcontainer');
 
-document.querySelector('#userbtn').onclick = () =>{
-  loginform.classList.toggle('act');
+document.querySelector('#loginbtn').onclick = () =>{
+  loginform.classList.toggle('active');
 }
 
 
+
 document.querySelector('#closeloginbutton').onclick = () =>{
-  loginform.classList.remove('act');
+  loginform.classList.remove('active');
 }
 
 window.onscroll = () => {
 
-    searchform.classList.toggle('active');
+    searchform.classList.remove('active');
     
     if(window.scrollY > 80){
         document.querySelector('.header .header2').classList.add('active');
@@ -33,6 +42,8 @@ window.onload = () => {
     else{
         document.querySelector('.header .header2').classList.remove('active');
     }
+
+    fadeOut();
 }
 
 
@@ -75,10 +86,10 @@ window.onload = () => {
      breakpoints: {
        0: {
          slidesPerView: 1, 
-        450: {
-          slidesPerView: 2,
-        },
        },
+       450: {
+        slidesPerView: 2,
+      },
        768: {
          slidesPerView: 3,
        },
@@ -88,4 +99,25 @@ window.onload = () => {
      },
    });
 
+   var swiper = new Swiper(".arrivalslider", {
+    spaceBetween: 10,
+    loop:true,
+    centeredslides :true,
+    autoplay : {
+     display:9500,
+     disableOnInteraction: false,
+    },
+   
+     breakpoints: {
+       0: {
+         slidesPerView: 1, 
+       },
+       768: {
+         slidesPerView: 2,
+       },
+       1024: {
+         slidesPerView: 3,
+       },
+     },
+   });
 
